@@ -1,4 +1,7 @@
+# This is a basic workflow to help you get started with Actions
+
 name: CI
+
 on: [push]
 
 jobs:
@@ -8,9 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: foo
-        uses: Ramesh-playgroung/hello-world-composite-action@v1
+        uses: Ramesh-playground/hello-world-composite-action@v1
         with:
           who-to-greet: 'Mona the Octocat'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
-        
